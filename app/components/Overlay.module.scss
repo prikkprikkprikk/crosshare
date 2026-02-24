@@ -38,6 +38,7 @@
   border-radius: 7px;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .inner {
     width: 90%;

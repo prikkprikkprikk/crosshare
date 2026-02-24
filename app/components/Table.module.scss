@@ -1,8 +1,8 @@
 @use '../lib/definitions' as *;
 
 .table {
-  background-color: var(--overlay-inner) !important;
   height: 400px;
+  background-color: var(--overlay-inner) !important;
 }
 
 .row {
@@ -15,12 +15,14 @@
   cursor: pointer;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .row {
     height: 50px;
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .row {
     height: 35px;

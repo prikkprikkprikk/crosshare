@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-property-value-no-unknown */
 @use '../lib/definitions' as *;
 
 .tinyNav {
@@ -22,7 +23,6 @@
   align-items: stretch;
 
   width: 100vw;
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   height: $tiny-col-min-height;
 
   background-color: var(--lighter);
@@ -63,7 +63,6 @@
 .gridHeader {
   overflow: hidden;
   display: none;
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   height: $square-header-height;
 }
 
@@ -109,6 +108,7 @@
   display: block;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .clueCol {
     scrollbar-width: none;
@@ -183,6 +183,7 @@
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .clueCol {
     width: 50%;

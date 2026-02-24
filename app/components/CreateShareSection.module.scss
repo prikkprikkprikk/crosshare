@@ -22,6 +22,7 @@
   justify-content: space-between;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .wrapper[data-half-width='true'] .button {
     width: 100%;
@@ -36,6 +37,7 @@
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .wrapper[data-half-width='true'] {
     flex-direction: row;

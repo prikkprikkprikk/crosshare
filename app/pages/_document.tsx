@@ -152,7 +152,8 @@ export default class CrosshareDocument extends Document {
             }}
           />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          {process.env.NEXT_PUBLIC_USE_EMULATORS ? (
+          {process.env.NODE_ENV !== 'production' ||
+          process.env.NEXT_PUBLIC_USE_EMULATORS ? (
             ''
           ) : (
             <>

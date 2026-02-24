@@ -84,6 +84,7 @@
   display: none;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .toast + .toast {
     margin-top: 1em;

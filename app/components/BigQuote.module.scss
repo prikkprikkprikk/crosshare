@@ -29,6 +29,7 @@
   font-style: italic;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .quote {
     font-size: 30px;

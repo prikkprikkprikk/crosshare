@@ -90,6 +90,7 @@
   background: var(--key-bg-click);
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .key[data-only-on-tablet='true'] {
     display: flex;

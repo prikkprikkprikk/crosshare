@@ -11,6 +11,7 @@
   margin-bottom: 0;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .link {
     width: 50%;

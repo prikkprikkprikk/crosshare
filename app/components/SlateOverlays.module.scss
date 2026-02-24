@@ -95,12 +95,14 @@
   vertical-align: middle;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .beginContainer {
     padding: $slate-padding-med 0 0;
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .beginContainer {
     padding: $slate-padding-large 0 0;

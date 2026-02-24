@@ -14,10 +14,10 @@
   ],
   "scripts": {
     "supportedBrowsers": "echo \"export const browserRegex = $(browserslist-useragent-regexp --allowHigherVersions);\" > lib/supportedBrowsers.ts",
-    "lint": "npx eslint components lib pages reducers scripts && npx stylelint \"**/*.css\"",
+    "lint": "npx eslint components lib pages reducers scripts && npx stylelint \"**/*.(css|scss)\"",
     "knip": "npx knip",
-    "format": "npx prettier \"../**/*\\.(ts(x)?|module\\.css)\" --write",
-    "checkFormat": "npx prettier \"../**/*\\.(ts(x)?|module\\.css)\" --check",
+    "format": "npx prettier \"../**/*\\.(ts(x)?|module\\.s?css)\" --write",
+    "checkFormat": "npx prettier \"../**/*\\.(ts(x)?|module\\.s?css)\" --check",
     "typecheck": "npx tsc",
     "clean": "rimraf nextjs/",
     "dev": "GOOGLE_APPLICATION_CREDENTIALS=../serviceAccountKey.json next dev",

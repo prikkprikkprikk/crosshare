@@ -32,9 +32,9 @@ import {
   ONE_WEEK,
   PartialBy,
   Position,
+  PuzzleInProgressStrictT,
   PuzzleInProgressT,
   PuzzleInProgressV,
-  PuzzleT,
   WorkerMessage,
   fromKeyString,
   fromKeyboardEvent,
@@ -78,30 +78,16 @@ import { Snackbar, useSnackbar } from './Snackbar.js';
 import { DefaultTopBar, TopBar } from './TopBar.js';
 import { MemoizedTopBarChildren } from './TopBarChildren.js';
 
-type BuilderProps = PartialBy<
-  Omit<
-    PuzzleT,
-    | 'comments'
-    | 'category'
-    | 'authorId'
-    | 'authorName'
-    | 'moderated'
-    | 'publishTime'
-    | 'rating'
-    | 'likes'
-    | 'packId'
-  >,
+export type BuilderProps = PartialBy<
+  PuzzleInProgressStrictT,
   | 'clues'
   | 'title'
-  | 'constructorNotes'
+  | 'notes'
   | 'blogPost'
-  | 'isContest'
   | 'contestAnswers'
-  | 'contestAnswerDigests'
-  | 'contestWinningSubmissions'
   | 'contestHasPrize'
   | 'contestRevealDelay'
-  | 'alternateSolutions'
+  | 'alternates'
   | 'guestConstructor'
   | 'commentsDisabled'
   | 'isPrivate'
@@ -210,16 +196,16 @@ const initializeState = (props: BuilderProps & AuthProps): BuilderState => {
 
   return initialBuilderState({
     id: saved?.id ?? null,
-    width: saved?.width ?? props.size.cols,
-    height: saved?.height ?? props.size.rows,
+    width: saved?.width ?? props.width,
+    height: saved?.height ?? props.height,
     grid: saved?.grid ?? props.grid,
     vBars: saved?.vBars ?? props.vBars ?? [],
     hBars: saved?.hBars ?? props.hBars ?? [],
     hidden: saved?.hidden ?? props.hidden ?? [],
     cellStyles: saved?.cellStyles ?? props.cellStyles ?? {},
     title: saved?.title ?? props.title ?? null,
-    notes: saved?.notes ?? props.constructorNotes ?? null,
-    clues: saved?.clues ?? {},
+    notes: saved?.notes ?? props.notes ?? null,
+    clues: saved?.clues ?? props.clues ?? {},
     authorId: props.user.uid,
     authorName: props.user.displayName || 'Anonymous',
     editable: true,
@@ -240,14 +226,16 @@ const initializeState = (props: BuilderProps & AuthProps): BuilderState => {
   });
 };
 
-export const Builder = (props: BuilderProps & AuthProps): React.JSX.Element => {
+export const Builder = (
+  props: BuilderProps & AuthProps & { isUpload?: boolean }
+): React.JSX.Element => {
   const [firstLaunch, setFirstLaunch] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem(STORAGE_KEY) === null) {
+    if (!props.isUpload && localStorage.getItem(STORAGE_KEY) === null) {
       setFirstLaunch(true);
     }
-  }, []);
+  }, [props.isUpload]);
 
   const [state, dispatch] = useReducer(builderReducer, props, initializeState);
 

@@ -4,6 +4,7 @@
   padding: 2em 1em;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($huge-and-up) {
   .page {
     max-width: $max-width;

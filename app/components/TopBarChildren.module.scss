@@ -17,6 +17,7 @@
   margin-bottom: 0;
   margin-left: auto;
 
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   font-size: calc($header-height - 20px);
   font-weight: bold;
 }

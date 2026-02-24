@@ -21,6 +21,7 @@
   line-height: 1.1em;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .header {
     min-height: 300px;
@@ -31,6 +32,7 @@
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .header {
     min-height: 250px;

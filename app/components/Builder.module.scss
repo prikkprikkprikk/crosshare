@@ -38,6 +38,7 @@
   height: 100%;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .fillListWrapper {
     display: block;

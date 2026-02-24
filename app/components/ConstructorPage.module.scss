@@ -9,6 +9,7 @@
   margin: 2em 1em;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($huge-and-up) {
   .header {
     max-width: $max-width;

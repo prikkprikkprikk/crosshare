@@ -5,18 +5,21 @@
   margin-bottom: -1em;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .stats {
     column-count: 2;
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .stats {
     column-count: 3;
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($huge-and-up) {
   .stats {
     column-count: 4;

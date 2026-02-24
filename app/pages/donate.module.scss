@@ -58,6 +58,7 @@
   text-align: right;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .patronHeader {
     font-size: 5em;

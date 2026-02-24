@@ -6,6 +6,7 @@
   margin: 1em;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($huge-and-up) {
   .featureList {
     max-width: $max-width;

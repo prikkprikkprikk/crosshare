@@ -1,5 +1,19 @@
 @use '../lib/definitions' as *;
 
+.deleteBtn {
+  color: var(--onerror);
+  background-color: var(--error);
+}
+
+.deleteBtn:hover {
+  background-color: var(--error-hover);
+}
+
+.fileInput {
+  overflow: hidden;
+  max-width: 70vw;
+}
+
 .launch {
   margin-top: 0.75em;
   font-size: 1.5em;
@@ -32,12 +46,14 @@
   width: 100%;
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .heroWrap {
     min-height: 175px;
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .heroWrap {
     min-height: 125px;

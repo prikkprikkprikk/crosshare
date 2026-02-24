@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-property-value-no-unknown */
 @use '../lib/definitions' as *;
 
 .notificationsBtn {
@@ -184,7 +185,6 @@
 }
 
 .header {
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   height: $header-height;
   color: var(--onprimary);
   background: var(--primary);
@@ -358,7 +358,6 @@
 
   max-height: 500px;
 
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   transition: all $animation-delay ease-in-out 0s;
 }
 
@@ -384,6 +383,7 @@
   background-color: rgb(0 0 0 / 10%);
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($small-and-up) {
   .linkContentsIcon[data-slate='true'] {
     font-size: 20px;
@@ -401,6 +401,7 @@
   }
 }
 
+/* stylelint-disable-next-line media-query-no-invalid */
 @media ($large-and-up) {
   .linkContentsIcon[data-slate='true'] {
     margin-right: 0.25rem;
